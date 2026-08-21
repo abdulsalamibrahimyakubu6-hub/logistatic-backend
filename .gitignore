@@ -12,3 +12,7 @@ db.sqlite3
 staticfiles/
 *.pyc
 __pycache__/
+
+
+# internal database url
+# postgresql://logistics_db_i8sk_user:pV703fZGhpjW5wG4ZaLPLQ8kclAnnqve@dpg-da43g7jm8hqs73dm2li0-a/logistics_db_i8sk

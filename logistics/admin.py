@@ -6,3 +6,4 @@ from .models import User, Shipment, ShipmentStatusLog
 admin.site.register(User, UserAdmin)
 admin.site.register(Shipment)
 admin.site.register(ShipmentStatusLog)
+
