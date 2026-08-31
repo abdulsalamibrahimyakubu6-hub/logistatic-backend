@@ -1,18 +1,26 @@
-# Secret Environment Varaibles
+# Environment Variables
 .env
+.env.local
 
-# Virtual Environment (Matches env, venv, venv, etc.)
+# Python virtual environments
+.venv/
 env/
-venv/
 venv/
 Env/
 
-# Database & Static files
-db.sqlite3
-staticfiles/
-*.pyc
+# Python bytecode
 __pycache__/
+*.py[cod]
+*$py.class
 
+# Database & static assets
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
 
-# internal database url
-# postgresql://logistics_db_i8sk_user:pV703fZGhpjW5wG4ZaLPLQ8kclAnnqve@dpg-da43g7jm8hqs73dm2li0-a/logistics_db_i8sk
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

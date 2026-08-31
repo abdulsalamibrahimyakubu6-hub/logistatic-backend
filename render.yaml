@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: logistics-backend
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn core.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com,localhost,127.0.0.1"
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: "True"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: logistics-db
+          property: connectionString
+
+databases:
+  - name: logistics-db
+    databaseName: logistics
+    user: logistics_user
+    plan: free
+
